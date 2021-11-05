@@ -1,6 +1,7 @@
 import gradleproj1.Course;
 import gradleproj1.Student;
 import gradleproj1.Module;
+import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 
@@ -69,6 +70,37 @@ public class Main {
         m3Enrolled.add(s2);
         m3Enrolled.add(s4);
         m3.setStudents(m3Enrolled);
+
+        //Course Object Creation
+        Course c1 = new Course();
+        Course c2 = new Course();
+
+        ArrayList<Course> listCourses = new ArrayList<>();
+        listCourses.add(c1);
+        listCourses.add(c2);
+
+        c1.setName("4BCT");
+        c2.setName("3BS");
+
+
+        //Adding modules by course
+        ArrayList<Module> c1_syllabus = new ArrayList<>();
+        c1_syllabus.add(m1);
+        c1_syllabus.add(m2);
+
+        ArrayList<Module> c2_syllabus = new ArrayList<>();
+        c2_syllabus.add(m3);
+        c2_syllabus.add(m2);
+
+        c1.setModules(c1_syllabus);
+        c2.setModules(c2_syllabus);
+
+
+        //Encountered issues with the jar... <error: package gradleproj1 does not exist>
+        //Idea was to use the toString() methods found in the library project for each class
+        //System.out.print(s1.toString());
+        //System.out.print(m1.toString());
+        //etc...
 
 
     }
